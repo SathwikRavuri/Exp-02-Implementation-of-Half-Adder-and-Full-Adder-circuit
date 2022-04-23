@@ -36,19 +36,55 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
+```
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: RAVURI SATHWIK
+RegisterNumber:  212220050026
 */
-Logic symbol & Truthtable
-RTL realization
 
+
+HALF ADDER
+
+module Adder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule 
+
+FULL ADDER
+
+module FullAdder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b)|(b&c)|(c&a));
+endmodule
+```
 ### Output:
+### Half Adder:
+### Logic symbol:
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/half%20hadder%201.png?raw=true)
+
 ### RTL
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/rtl%201.png?raw=true)
+### Truth table:
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/truth%20table%201.png?raw=true)
 ### TIMING DIAGRAM
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/trimming%201.png?raw=true)
 
-
-### TRUTH TABLE 
+### Full Adder:
+### Logic symbol:
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/full%20gadder.png?raw=true)
+### Rtl:
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/rtl%202.png?raw=true)
+### Truth table:
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/truth%20table2.png?raw=true)
+### TIMING DIAGRAM:
+![output](https://github.com/SathwikRavuri/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/blob/main/timming2.png?raw=true)
 
 ### Result:
+Thus, a half adder and full adder circuit is designed to verify its truth table in Quartus using Verilog programming.
+
+
